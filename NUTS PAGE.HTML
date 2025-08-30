@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUTS PAGE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fff0f5, #fce6e6, #e6ffe6);
+      padding: 20px;
+      text-align: center;
+      color: #5a3a1a;
+    }
+    .container {
+      background: #ffffffee;
+      width: 95%;
+      margin: auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    }
+    h1 { 
+      color: #b5651d; 
+      margin-bottom: 40px; 
+      font-size: 2.5em; 
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: #fefcf8;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+    .card:hover { transform: scale(1.07); }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+    .card p { font-size: 1.3em; font-weight: bold; color: #5a3a1a; }
+    .info { display: none; margin-top: 10px; font-size: 1em; color: #333; }
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: #ff6699;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🥜 OUR NUTS 🥜</h1>
+    <div class="grid">
+      <div class="card" onclick="toggleInfo(this)">
+        <img src="https://th.bing.com/th/id/OIP.LhUsF3TZok-ApqY7RunZrQHaEJ?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="almond">
+        <p>ALMOND 🌰</p>
+        <div class="info">اللوز غني بفيتامين E والمغنيسيوم، يقوي العظام ويعزز صحة القلب.</div>
+      </div>
+
+      <div class="card" onclick="toggleInfo(this)">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.u6aH89qAK2zjDEgk9OJAtQHaEU?rs=1&pid=ImgDetMain&o=7&rm=3" alt="cashew">
+        <p>CASHEW 🥜</p>
+        <div class="info">الكاجو يحتوي على النحاس والزنك، يساعد على تقوية المناعة وصحة الشعر.</div>
+      </div>
+
+      <div class="card" onclick="toggleInfo(this)">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.PHdoCGeXJsz16-ZfrbvWpgHaEU?rs=1&pid=ImgDetMain&o=7&rm=3" alt="pistachio">
+        <p>PISTACHIO 💚</p>
+        <div class="info">الفستق غني بالبروتين والألياف، يساعد على خفض الكوليسترول.</div>
+      </div>
+
+      <div class="card" onclick="toggleInfo(this)">
+        <img src="https://www.bharatq8.com/wp-content/uploads/2019/03/%D8%A8%D9%86%D8%AF%D9%82.jpg" alt="hazelnut">
+        <p>HAZELNUT 🌰</p>
+        <div class="info">البندق يحتوي على دهون صحية، مفيد لصحة الدماغ ويحسن التركيز.</div>
+      </div>
+
+      <div class="card" onclick="toggleInfo(this)">
+        <img src="https://th.bing.com/th/id/R.1650fb66065f5dba319f8081d5c881c5?rik=e4oHt0GyZjU9Mw&pid=ImgRaw&r=0" alt="walnut">
+        <p>WALNUT 🟤</p>
+        <div class="info">عين الجمل غني بأوميجا 3، يحافظ على صحة القلب والذاكرة.</div>
+      </div>
+
+      <div class="card" onclick="toggleInfo(this)">
+        <img src="https://th.bing.com/th/id/R.27a463ddddfab91de33342681324f690?rik=MS6s7wyZjwZx%2bw&riu=http%3a%2f%2fsnacks-roastery.com%2fcdn%2fshop%2ffiles%2fs41.jpg%3fv%3d1732636557&ehk=4331iexKznUaAhzrXJpjLCj4b1dvDhIB757KA7R6pkA%3d&risl=&pid=ImgRaw&r=0" alt="peanut">
+        <p>PEANUT 🥜</p>
+        <div class="info">الفول السوداني مصدر ممتاز للبروتين والفيتامينات B، يعزز الطاقة.</div>
+      </div>
+    </div>
+
+    <a class="back" href="aml.html">⬅ Back</a>
+  </div>
+
+  <script>
+    function toggleInfo(card) {
+      let info = card.querySelector(".info");
+      info.style.display = (info.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
